@@ -1,0 +1,5 @@
+aws_region  = "us-east-1"
+project_name = "warranty-analyst-copilot"
+environment  = "dev"
+
+embedding_model_arn = "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
