@@ -1,4 +1,4 @@
-# Terraform Infrastructure
+# Terraform Infrastructure Readme
 
 This folder contains the Infrastructure as Code implementation for the Warranty Analyst Copilot use case.
 
