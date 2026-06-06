@@ -35,7 +35,7 @@ resource "aws_opensearchserverless_security_policy" "network" {
           ]
         }
       ]
-      AllowFromPublic = true
+      AllowFromPublic = false
     }
   ])
 }
