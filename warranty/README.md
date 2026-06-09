@@ -20,26 +20,32 @@ Warranty processes often involve large volumes of structured, semi-structured, a
 
 GenAI can be considered when the business need involves summarization, classification, explanation, retrieval, comparison, drafting, or guided analysis.
 
-## Initial Use Case Categories
+## Current Warranty GenAI Portfolio
 
-Planned warranty use cases include:
+The repository is evolving into a structured portfolio of warranty-focused GenAI solution accelerators.
 
-1. Warranty Claim Review Assistant
-2. Warranty Claim Explanation Generator
+Current and planned use cases include:
+
+1. Warranty Analyst Copilot
+2. Claim-to-Policy Matching Assistant
 3. Early Warning Signal Summarizer
-4. Claim-to-Policy Matching Assistant
-5. Dealer Technical Narrative Quality Checker
-6. Warranty Fraud / Anomaly Explanation Assistant
-7. Warranty Analyst Copilot
-8. Field Concern Report Generator
-9. Warranty Knowledge Base Q&A
-10. Root Cause Hypothesis Assistant
+4. Field Concern Report Generator
+5. Warranty Knowledge Base Q&A
+6. Root Cause Hypothesis Assistant
+7. Dealer Narrative Quality Checker
+8. Fraud / Anomaly Explanation Assistant
+9. Claim Review Assistant
+10. Claim Explanation Generator
 
 ---
 
-# Active Solution Accelerator
+# Active Solution Accelerators
 
-## UC-07 — Warranty Analyst Copilot
+The repository currently contains two primary implementation-focused use cases.
+
+---
+
+# UC-07 — Warranty Analyst Copilot
 
 The primary active implementation currently being developed in this repository is:
 
@@ -63,7 +69,7 @@ RAG Foundation
 Future Agentic Workflow
 ```
 
-### Objective
+## Objective
 
 Build an AWS-native GenAI copilot that helps warranty analysts:
 
@@ -76,7 +82,7 @@ Build an AWS-native GenAI copilot that helps warranty analysts:
 - Generate structured analyst briefs
 - Support human-in-the-loop decision making
 
-### Current Architecture Direction
+## Current Architecture Direction
 
 ```text
 Analyst UI
@@ -92,7 +98,7 @@ Knowledge Base + Business Data
 Structured Analyst Brief
 ```
 
-### Current AWS Services in Scope
+## Current AWS Services in Scope
 
 - Amazon Bedrock
 - Amazon Bedrock Knowledge Bases
@@ -103,7 +109,7 @@ Structured Analyst Brief
 - IAM
 - DynamoDB (future phase)
 
-### Current Repository Structure
+## Current Repository Structure
 
 ```text
 warranty/
@@ -112,40 +118,42 @@ warranty/
 │
 ├── 07_warranty_analyst_copilot.md
 │
-└── uc-07-warranty-analyst-copilot/
-    │
-    ├── README.md
-    │
-    ├── docs/
-    │
-    ├── terraform/
-    │   ├── versions.tf
-    │   ├── providers.tf
-    │   ├── variables.tf
-    │   ├── outputs.tf
-    │   ├── main.tf
-    │   ├── terraform.tfvars.example
-    │   ├── .gitignore
-    │   │
-    │   └── modules/
-    │       ├── s3/
-    │       ├── opensearch/
-    │       ├── iam/
-    │       └── bedrock/
-    │
-    ├── sample-data/
-    │   └── policies/
-    │
-    ├── lambda/
-    │
-    ├── prompts/
-    │
-    ├── architecture/
-    │
-    └── tests/
+├── uc-07-warranty-analyst-copilot/
+│   │
+│   ├── README.md
+│   │
+│   ├── docs/
+│   │
+│   ├── terraform/
+│   │   ├── versions.tf
+│   │   ├── providers.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   ├── main.tf
+│   │   ├── terraform.tfvars.example
+│   │   ├── .gitignore
+│   │   │
+│   │   └── modules/
+│   │       ├── s3/
+│   │       ├── opensearch/
+│   │       ├── iam/
+│   │       └── bedrock/
+│   │
+│   ├── sample-data/
+│   │   └── policies/
+│   │
+│   ├── lambda/
+│   │
+│   ├── prompts/
+│   │
+│   ├── architecture/
+│   │
+│   └── tests/
+│
+└── uc-08-claim-to-policy-matching-assistant/
 ```
 
-### Current Phase Focus
+## Current Phase Focus
 
 The project is currently focused on:
 
@@ -162,7 +170,7 @@ Current implementation objectives:
 - Validate retrieval-augmented generation workflows
 - Establish modular enterprise-grade Terraform patterns
 
-### Synthetic Knowledge Base Content
+## Synthetic Knowledge Base Content
 
 The repository currently includes synthetic policy documents for:
 
@@ -179,6 +187,84 @@ These documents are intended for:
 - Grounded answer validation
 - Prompt engineering experiments
 - Future Bedrock Agent workflows
+
+---
+
+# UC-08 — Claim-to-Policy Matching Assistant
+
+The second active implementation-focused use case currently being structured is:
+
+```text
+UC-08 Claim-to-Policy Matching Assistant
+```
+
+## Objective
+
+Build a GenAI-powered assistant capable of:
+
+- Matching warranty claims to applicable policies
+- Retrieving policy guidance
+- Identifying missing documentation
+- Comparing claim narratives against policy expectations
+- Generating structured policy review summaries
+- Supporting analyst decision workflows
+
+## Intended Workflow
+
+```text
+Claim Text / Claim Data
+        ↓
+Policy Retrieval
+        ↓
+Amazon Bedrock Knowledge Base
+        ↓
+Retrieved Policy Context
+        ↓
+LLM-Based Comparison
+        ↓
+Structured Policy Match Summary
+        ↓
+Human Analyst Review
+```
+
+## Planned Repository Structure
+
+```text
+uc-08-claim-to-policy-matching-assistant/
+│
+├── README.md
+├── docs/
+├── prompts/
+├── sample-data/
+├── evaluation/
+├── lambda/
+├── notebooks/
+├── tests/
+└── terraform/
+```
+
+## Strategic Purpose
+
+This use case is intended to strengthen:
+
+- Retrieval-Augmented Generation engineering
+- Policy grounding strategies
+- Retrieval evaluation discipline
+- Hallucination reduction techniques
+- Enterprise prompt engineering patterns
+- Structured analyst guidance workflows
+
+## Relationship to UC-07
+
+UC-08 is intentionally designed to reuse the same foundational AWS services and RAG infrastructure established for the Warranty Analyst Copilot.
+
+This creates a reusable enterprise retrieval foundation that can later support:
+
+- Claim Review Assistant
+- Dealer Narrative Quality Checker
+- Coverage Eligibility Assistant
+- Fraud / Anomaly Explanation Assistant
+- Future multi-agent workflows
 
 ---
 
@@ -208,20 +294,31 @@ Business Value
 
 Warranty GenAI solutions should be positioned as decision support and workflow acceleration tools unless strong governance, validation, auditability, and human review mechanisms are in place.
 
-## Future Direction
+## Long-Term Direction
 
-Future planned enhancements for the Warranty Analyst Copilot include:
+The long-term direction of this repository is to evolve from:
 
-- DynamoDB-backed claim retrieval
-- Lambda action groups
-- Amazon Bedrock Agents
-- Similar claim retrieval
-- Structured analyst brief generation
-- Human feedback capture
-- Evaluation datasets
+```text
+Standalone GenAI Use Cases
+```
+
+into:
+
+```text
+Enterprise Warranty AI Platform Patterns
+```
+
+including:
+
+- RAG foundations
+- Agentic workflows
+- Multi-agent orchestration
+- Structured evaluation frameworks
+- Human feedback loops
+- Retrieval observability
 - Hallucination testing
-- Event-driven triage workflows
-- Multi-agent orchestration patterns
+- Workflow orchestration patterns
+- Event-driven AI processing
 
 ## Shared Templates
 
