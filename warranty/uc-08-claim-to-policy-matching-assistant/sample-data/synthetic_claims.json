@@ -1,0 +1,79 @@
+[
+  {
+    "claim_id": "CLM-1001",
+    "product_model": "Model-X",
+    "model_year": 2024,
+    "symptom": "Intermittent no-start condition",
+    "repair_action": "Fuel pump replaced",
+    "technician_notes": "Fuel pressure below specification during testing. Verified intermittent pressure drop.",
+    "diagnostic_information": {
+      "dtc_codes": ["P0087"],
+      "fuel_pressure_test": "Below specification"
+    },
+    "labor_hours": 3.2,
+    "parts_replaced": [
+      "Fuel Pump Assembly"
+    ],
+    "claim_amount": 842.50,
+    "expected_policy_matches": [
+      "fuel_system_diagnostic_policy",
+      "claim_documentation_policy"
+    ]
+  },
+  {
+    "claim_id": "CLM-1002",
+    "product_model": "Model-Z",
+    "model_year": 2023,
+    "symptom": "Repeat engine hesitation after previous repair",
+    "repair_action": "Fuel injector replaced",
+    "technician_notes": "Vehicle returned with similar hesitation complaint within 45 days of previous repair.",
+    "diagnostic_information": {
+      "dtc_codes": ["P0171"],
+      "prior_repair_reference": "CLM-0933"
+    },
+    "labor_hours": 4.8,
+    "parts_replaced": [
+      "Fuel Injector"
+    ],
+    "claim_amount": 1195.75,
+    "expected_policy_matches": [
+      "repeat_repair_policy",
+      "claim_documentation_policy"
+    ]
+  },
+  {
+    "claim_id": "CLM-1003",
+    "product_model": "Model-A",
+    "model_year": 2025,
+    "symptom": "Check engine light with rough idle",
+    "repair_action": "Throttle body inspection and cleaning",
+    "technician_notes": "Narrative incomplete. No final verification documented.",
+    "diagnostic_information": {
+      "dtc_codes": ["P0507"]
+    },
+    "labor_hours": 6.1,
+    "parts_replaced": [],
+    "claim_amount": 1450.00,
+    "expected_policy_matches": [
+      "claim_documentation_policy",
+      "labor_time_review_policy"
+    ]
+  },
+  {
+    "claim_id": "CLM-1004",
+    "product_model": "Model-Q",
+    "model_year": 2022,
+    "symptom": "Campaign-related software update concern",
+    "repair_action": "Software update completed",
+    "technician_notes": "Repair appears related to active campaign guidance.",
+    "diagnostic_information": {
+      "campaign_code": "CMP-2026-04"
+    },
+    "labor_hours": 1.5,
+    "parts_replaced": [],
+    "claim_amount": 225.00,
+    "expected_policy_matches": [
+      "campaign_eligibility_policy"
+    ]
+  }
+]
