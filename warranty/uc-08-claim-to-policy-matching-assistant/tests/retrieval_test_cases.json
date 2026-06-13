@@ -1,0 +1,89 @@
+[
+  {
+    "test_id": "RT-001",
+    "claim_id": "CLM-1001",
+    "test_name": "Fuel system claim retrieves diagnostic and documentation policies",
+    "input_question": "Which policies are relevant to this fuel pump replacement claim?",
+    "expected_policy_matches": [
+      "fuel_system_diagnostic_policy",
+      "claim_documentation_policy"
+    ],
+    "expected_concepts": [
+      "fuel pressure test",
+      "diagnostic trouble codes",
+      "technician cause statement",
+      "repair verification"
+    ],
+    "pass_criteria": [
+      "Retrieved context includes fuel system diagnostic guidance",
+      "Retrieved context includes general claim documentation guidance",
+      "Response does not approve or deny the claim",
+      "Response identifies documentation requirements"
+    ]
+  },
+  {
+    "test_id": "RT-002",
+    "claim_id": "CLM-1002",
+    "test_name": "Repeat repair claim retrieves repeat repair guidance",
+    "input_question": "Does this claim show repeat repair indicators and what policy guidance applies?",
+    "expected_policy_matches": [
+      "repeat_repair_policy",
+      "claim_documentation_policy"
+    ],
+    "expected_concepts": [
+      "same or similar concern",
+      "prior repair history",
+      "90 days",
+      "escalation considerations"
+    ],
+    "pass_criteria": [
+      "Retrieved context includes repeat repair policy guidance",
+      "Response identifies prior repair review as relevant",
+      "Response avoids unsupported final claim disposition",
+      "Response recommends analyst review"
+    ]
+  },
+  {
+    "test_id": "RT-003",
+    "claim_id": "CLM-1003",
+    "test_name": "High labor and weak narrative retrieves labor and documentation policies",
+    "input_question": "What documentation and labor review concerns should an analyst consider?",
+    "expected_policy_matches": [
+      "claim_documentation_policy",
+      "labor_time_review_policy"
+    ],
+    "expected_concepts": [
+      "labor hours above standard allowance",
+      "technician explanation",
+      "repair verification",
+      "incomplete narrative"
+    ],
+    "pass_criteria": [
+      "Retrieved context includes labor time review guidance",
+      "Retrieved context includes documentation quality guidance",
+      "Response flags missing or weak narrative details",
+      "Response identifies need for analyst review"
+    ]
+  },
+  {
+    "test_id": "RT-004",
+    "claim_id": "CLM-1004",
+    "test_name": "Campaign-related claim retrieves campaign eligibility policy",
+    "input_question": "What campaign eligibility information should be reviewed for this claim?",
+    "expected_policy_matches": [
+      "campaign_eligibility_policy"
+    ],
+    "expected_concepts": [
+      "campaign code",
+      "eligibility confirmation",
+      "repair date",
+      "campaign documentation"
+    ],
+    "pass_criteria": [
+      "Retrieved context includes campaign eligibility guidance",
+      "Response identifies campaign documentation expectations",
+      "Response does not assume eligibility without evidence",
+      "Response recommends human analyst confirmation"
+    ]
+  }
+]
