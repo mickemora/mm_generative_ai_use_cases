@@ -109,50 +109,6 @@ Structured Analyst Brief
 - IAM
 - DynamoDB (future phase)
 
-## Current Repository Structure
-
-```text
-warranty/
-│
-├── README.md
-│
-├── 07_warranty_analyst_copilot.md
-│
-├── uc-07-warranty-analyst-copilot/
-│   │
-│   ├── README.md
-│   │
-│   ├── docs/
-│   │
-│   ├── terraform/
-│   │   ├── versions.tf
-│   │   ├── providers.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   ├── main.tf
-│   │   ├── terraform.tfvars.example
-│   │   ├── .gitignore
-│   │   │
-│   │   └── modules/
-│   │       ├── s3/
-│   │       ├── opensearch/
-│   │       ├── iam/
-│   │       └── bedrock/
-│   │
-│   ├── sample-data/
-│   │   └── policies/
-│   │
-│   ├── lambda/
-│   │
-│   ├── prompts/
-│   │
-│   ├── architecture/
-│   │
-│   └── tests/
-│
-└── uc-08-claim-to-policy-matching-assistant/
-```
-
 ## Current Phase Focus
 
 The project is currently focused on:
@@ -227,21 +183,40 @@ Structured Policy Match Summary
 Human Analyst Review
 ```
 
-## Planned Repository Structure
+## Current UC-08 Assets
 
-```text
-uc-08-claim-to-policy-matching-assistant/
-│
-├── README.md
-├── docs/
-├── prompts/
-├── sample-data/
-├── evaluation/
-├── lambda/
-├── notebooks/
-├── tests/
-└── terraform/
-```
+The repository now includes foundational assets for:
+
+- Business-oriented documentation
+- Prompt engineering
+- Synthetic claim datasets
+- Expected retrieval mappings
+- Retrieval validation
+- Manual evaluation workflows
+- Governance-oriented testing
+
+### Current Prompt Assets
+
+- Claim-to-policy comparison prompts
+- Missing documentation detection prompts
+- Structured policy summary prompts
+- Retrieval grounding prompts
+
+### Current Sample Data Assets
+
+- Synthetic warranty claims
+- Expected policy mappings
+- Diagnostic scenarios
+- Repeat repair scenarios
+- Labor review scenarios
+- Campaign eligibility scenarios
+
+### Current Testing Assets
+
+- Retrieval test cases
+- Manual test plans
+- Prompt output validation checklists
+- Governance-oriented evaluation criteria
 
 ## Strategic Purpose
 
@@ -253,6 +228,7 @@ This use case is intended to strengthen:
 - Hallucination reduction techniques
 - Enterprise prompt engineering patterns
 - Structured analyst guidance workflows
+- Evaluation-aware AI engineering practices
 
 ## Relationship to UC-07
 
@@ -319,6 +295,8 @@ including:
 - Hallucination testing
 - Workflow orchestration patterns
 - Event-driven AI processing
+- Prompt governance patterns
+- Evaluation-aware AI engineering
 
 ## Shared Templates
 
