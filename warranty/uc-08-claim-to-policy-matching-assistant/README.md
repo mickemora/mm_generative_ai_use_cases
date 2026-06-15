@@ -1,6 +1,6 @@
 # UC-08 Claim-to-Policy Matching Assistant
 
-This directory contains the solution design, architecture, prompts, sample data, evaluation assets, and future implementation artifacts for the Claim-to-Policy Matching Assistant use case.
+This directory contains the solution design, architecture, prompts, sample data, evaluation assets, testing artifacts, and future implementation components for the Claim-to-Policy Matching Assistant use case.
 
 ---
 
@@ -93,10 +93,15 @@ uc-08-claim-to-policy-matching-assistant/
 │   ├── expected_policy_mappings.md
 │   └── README.md
 │
+├── tests/
+│   ├── retrieval_test_cases.json
+│   ├── prompt_output_validation_checklist.md
+│   ├── manual_test_plan.md
+│   └── README.md
+│
 ├── evaluation/
 ├── lambda/
 ├── notebooks/
-├── tests/
 └── terraform/
 ```
 
@@ -153,6 +158,37 @@ The expected policy mapping reference is intended to support:
 
 ---
 
+# Current Testing and Validation Assets
+
+The repository now includes baseline testing assets intended to establish early evaluation discipline for Retrieval-Augmented Generation workflows.
+
+Current testing assets include:
+
+- Retrieval test cases
+- Manual validation workflows
+- Prompt output validation checklists
+- Retrieval expectation mappings
+- Governance-oriented evaluation criteria
+
+The current testing strategy focuses on:
+
+- Retrieval relevance
+- Policy grounding
+- Hallucination reduction
+- Structured response quality
+- Explainability
+- Human-in-the-loop governance
+
+The test scenarios currently validate:
+
+- Fuel system diagnostic claims
+- Repeat repair claims
+- Labor review scenarios
+- Campaign eligibility workflows
+- Weak documentation detection
+
+---
+
 # Strategic Purpose
 
 This use case is intended to strengthen:
@@ -163,6 +199,8 @@ This use case is intended to strengthen:
 - Structured analyst guidance generation
 - Prompt governance patterns
 - Hallucination reduction techniques
+- Evaluation-aware prompt engineering
+- Retrieval transparency practices
 
 The project is intentionally evolving beyond:
 
@@ -203,5 +241,7 @@ Future planned enhancements may include:
 - Human feedback loops
 - Retrieval observability
 - Structured evaluation scoring
+- Automated retrieval evaluation
+- Prompt regression testing
 - Agentic workflow integration
 - Multi-agent orchestration
